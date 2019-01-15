@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>联系我们</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/jq22.css">
+  <link rel="stylesheet" href="./css/public.css">
+  <script src="./js/jquery-latest.min.js"></script>
+  <script src="./js/jquery-3.2.1.min.js"></script>
+  <script src="./js/jq22.js"></script>
+  <script src="./js/public.js"></script>
+  <script src="./js/jquery.qrcode.min.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- 头部 -->
+    <header id="header"></header>
+    <script>
+      $('#header').load('./header.html');
+    </script>
+    <section class="clearfix"></section>
+    <!-- 蒙层 -->
+    <div class="screen-mask"></div>
+    <!-- 地图 -->
+    <section>
+      <div class="container">
+        <div class="mt30 mb30">
+          <h4 class="tc">联系我们</h4>
+          <h6 class="tc contact-desc">CONTACT US</h6>
+        </div>
+        <iframe src="http://f.amap.com" scrolling="no" width="100%" align="" height="400" frameborder="0"></iframe>
+      </div>
+    </section>
+    <!-- 公司联系方式 -->
+    <section>
+      <div class="container mt20 mb30 col-10 col-lg-6">
+        <h3 class="contact-title-red pt10">广州壹盏灯文化传播有限公司</h3>
+        <p>地址： 广州市海珠区南泰路228号联星创意中心C区316室</p>
+        <p>邮编： 510000</p>
+        <p>电话： 020-84159041</p>
+        <p>手机： 12345678900</p>
+        <p>邮箱： 13490@outlook.com</p>
+      </div>
+    </section>
+    <!-- 微信分享 -->
+    <div id="wecaht-qrcode"></div>
+    <script>
+      $('#wecaht-qrcode').load('./qrcode.html');
+    </script>
+    <!-- 底部 -->
+    <footer id="footer"></footer>
+    <script>
+      $('#footer').load('./footer.html');
+    </script>
+    <!-- 分享按钮组-->
+    <div id="share"></div>
+    <script>
+        $('#share').load('./share.html');
+    </script>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>联系我们</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/jq22.css">
+  <link rel="stylesheet" href="../css/public.css">
+  <script src="../js/jquery-latest.min.js"></script>
+  <script src="../js/jquery-3.2.1.min.js"></script>
+  <script src="../js/jq22.js"></script>
+  <script src="../js/public.js"></script>
+  <script src="../js/jquery.qrcode.min.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- 头部 -->
+    <header id="header"></header>
+    <script>
+      $('#header').load('./header.html');
+    </script>
+    <section class="clearfix"></section>
+    <!-- 蒙层 -->
+    <div class="screen-mask"></div>
+    <!-- 核心服务 -->
+    <div class="container">
+      <div class="mt30 mb30">
+        <h4 class="tc">核心服务</h4>
+        <h6 class="tc service-desc">CORE SERVICE</h6>
+      </div>
+      <div class="mb40 tc row">
+        <div class="card card-border-none service-card-box col-6 col-lg-3 mb30">
+          <div class="service-card-top-img-box">
+            <img class="card-img-top service-card-top-img" src="../images/icon-01.png" alt="Card image cap">
+          </div>
+          <div class="card-body service-card-body">
+            <h5 class="card-title">影视类制作</h5>
+            <p class="card-text service-middle-line"></p>
+            <div class="service-desc">
+              <p>TCV拍摄</p>
+              <p>网大及微电影制作</p>
+              <p>企业形象及专题片</p>
+              <p>网络宣传短片</p>
+              <p>产品展示</p>
+            </div>
+          </div>
+          <div class="card-footer service-more-box">
+            <a href="#" class="service-more">MORE</a>
+          </div>
+        </div>
+        <div class="card card-border-none service-card-box col-6 col-lg-3 mb30">
+          <div class="service-card-top-img-box">
+            <img class="card-img-top service-card-top-img" src="../images/icon-02.png" alt="Card image cap">
+          </div>
+          <div class="card-body service-card-body">
+            <h5 class="card-title">平面类制作</h5>
+            <p class="card-text service-middle-line"></p>
+            <div class="service-desc">
+              <p>时尚平面广告</p>
+              <p>个人及企业形象</p>
+              <p>电/微商平面拍摄</p>
+              <p>产品静物</p>
+            </div>
+          </div>
+          <div class="card-footer service-more-box">
+            <a href="#" class="service-more">MORE</a>
+          </div>
+        </div>
+        <div class="card card-border-none service-card-box col-6 col-lg-3 mb30">
+          <div class="service-card-top-img-box">
+            <img class="card-img-top service-card-top-img" src="../images/icon-03.png" alt="Card image cap">
+          </div>
+          <div class="card-body service-card-body">
+            <h5 class="card-title">设计类制作</h5>
+            <p class="card-text service-middle-line"></p>
+            <div class="service-desc">
+              <p>企业VI设计</p>
+              <p>产品设计</p>
+              <p>广告海报设计</p>
+              <p>企业网站设计</p>
+              <p>电商及公众号网站建设</p>
+            </div>
+          </div>
+          <div class="card-footer service-more-box">
+            <a href="#" class="service-more">MORE</a>
+          </div>
+        </div>
+        <div class="card card-border-none service-card-box col-6 col-lg-3 mb30">
+          <div class="service-card-top-img-box">
+            <img class="card-img-top service-card-top-img" src="../images/icon-04.png" alt="Card image cap">
+          </div>
+          <div class="card-body service-card-body">
+            <h5 class="card-title">投放资源</h5>
+            <p class="card-text service-middle-line"></p>
+            <div class="service-desc">
+              <p>广东省地方电视台一级投放资源</p>
+              <p>广州地铁视频终端投放代理</p>
+            </div>
+          </div>
+          <div class="card-footer service-more-box">
+            <a href="#" class="service-more">MORE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 微信分享 -->
+    <div id="wecaht-qrcode"></div>
+    <script>
+      $('#wecaht-qrcode').load('./qrcode.html');
+    </script>
+    <!-- 底部 -->
+    <footer id="footer"></footer>
+    <script>
+      $('#footer').load('./footer.html');
+    </script>
+    <!-- 分享按钮组-->
+    <div id="share"></div>
+    <script>
+        $('#share').load('./share.html');
+    </script>
+  </div>
+</body>
+
+</html>

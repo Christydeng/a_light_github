@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/jq22.css" />
+    <link rel="stylesheet" href="./css/public.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./js/jquery-latest.min.js"></script>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jq22.js"></script>
+    <script src="./js/public.js"></script>
+    <script src="./js/jquery.qrcode.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- 头部 -->
+        <header id="header"></header>
+        <script>
+            $('#header').load('./header.html');
+        </script>
+
+        <section class="clearfix"></section>
+
+        <!-- 蒙层 -->
+        <div class="screen-mask"></div>
+
+        <!-- 轮播图 -->
+        <section class="banner section section-1">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./images/banner1.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/banner2.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/banner3.jpg">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </section>
+
+        <!-- WORK -->
+        <section class="work section section-2 text-center">
+            <div class="work-header">
+                <div class="title col col-12">壹盏灯出品</div>
+                <div class="title-desc col col-12">HOW WE WORK</div>
+            </div>
+            <div class="work-content text-center">
+                <div class="work-content-left">
+                    <div class="work-content-img">
+                        <a href="javascript:void(0)">
+                            <img src="./images/index_work1.jpg" alt="" />
+                            <div class="video-img-mask"></div>
+                            <img class="video-icon" src="./images/play_icon.png" />
+                            <div class="mask">
+                                <span>作品名称</span>
+                                <span>查看详情&gt;</span>
+                            </div>
+                        </a>
+                        <video class="video-res" autoplay controls="controls" muted="muted" volume="0" poster="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMDMvZGQ4ZmRhYzcyOTA0ZTBlZmJjYzRlNzM4ZmJiYTMyOWEuanBn.jpg"
+                            loop="loop" style="width: 100%; height: 100%;object-fit:cover;object-position:center center">
+                            <source type="video/webm" src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMDMvMTIzNC53ZWJt.webm" />
+                            <source type="video/mp4" src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMDMvYXBwbGVfc2luZ19jaGlsZC5tcDQ_p_p100_p_3D.mp4" />
+                        </video>
+                    </div>
+                </div>
+                <div class="work-content-right">
+                    <div class="work-content-img">
+                        <a href="./about.html">
+                            <img src="./images/index_work2.jpg" alt="" />
+                            <div class="mask">
+                                <span>关于我们</span>
+                                <span>&gt;</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="work-content-img">
+                        <a href="./service.html">
+                            <img src="./images/index_work3.jpg" alt="" />
+                            <div class="mask">
+                                <span>核心服务</span>
+                                <span>&gt;</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CASE -->
+        <section class="case section section-3 text-center">
+            <div class="case-header">
+                <div class="title col col-12">优秀案例</div>
+                <div class="title-desc col col-12">excellent case</div>
+            </div>
+            <div class="case-content container text-center">
+                <div class="case-card">
+                    <div class="case-card-img">
+                        <img src="./images/index_case1.jpg" alt="" />
+                    </div>
+                    <div class="case-card-desc text-left">
+                        <div class="case-card-desc-title">作品名称</div>
+                        <div class="line"></div>
+                        <div class="case-card-desc-content">文字说明文字说明文字说明文字说明文字说明文字说明</div>
+                        <div class="case-card-desc-cate">#静物摄影</div>
+                        <a href="javascript:void(0)">MORE</a>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-card-img">
+                        <img src="./images/index_case2.jpg" alt="" />
+                    </div>
+                    <div class="case-card-desc text-left">
+                        <div class="case-card-desc-title">作品名称</div>
+                        <div class="line"></div>
+                        <div class="case-card-desc-content">文字说明文字说明文字说明文字说明文字说明文字说明</div>
+                        <div class="case-card-desc-cate">#静物摄影</div>
+                        <a href="javascript:void(0)">MORE</a>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-card-img">
+                        <img src="./images/index_case3.jpg" alt="" />
+                    </div>
+                    <div class="case-card-desc text-left">
+                        <div class="case-card-desc-title">作品名称</div>
+                        <div class="line"></div>
+                        <div class="case-card-desc-content">文字说明文字说明文字说明文字说明文字说明文字说明</div>
+                        <div class="case-card-desc-cate">#静物摄影</div>
+                        <a href="javascript:void(0)">MORE</a>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-card-img">
+                        <img src="./images/index_case4.jpg" alt="" />
+                    </div>
+                    <div class="case-card-desc text-left">
+                        <div class="case-card-desc-title">作品名称</div>
+                        <div class="line"></div>
+                        <div class="case-card-desc-content">文字说明文字说明文字说明文字说明文字说明文字说明</div>
+                        <div class="case-card-desc-cate">#静物摄影</div>
+                        <a href="javascript:void(0)">MORE</a>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-card-img">
+                        <img src="./images/index_case5.jpg" alt="" />
+                    </div>
+                    <div class="case-card-desc text-left">
+                        <div class="case-card-desc-title">作品名称</div>
+                        <div class="line"></div>
+                        <div class="case-card-desc-content">文字说明文字说明文字说明文字说明文字说明文字说明</div>
+                        <div class="case-card-desc-cate">#静物摄影</div>
+                        <a href="javascript:void(0)">MORE</a>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-card-img">
+                        <img src="./images/index_case6.jpg" alt="" />
+                    </div>
+                    <div class="case-card-desc text-left">
+                        <div class="case-card-desc-title">作品名称</div>
+                        <div class="line"></div>
+                        <div class="case-card-desc-content">文字说明文字说明文字说明文字说明文字说明文字说明</div>
+                        <div class="case-card-desc-cate">#静物摄影</div>
+                        <a href="javascript:void(0)">MORE</a>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-card-img">
+                        <img src="./images/index_case7.jpg" alt="" />
+                    </div>
+                    <div class="case-card-desc text-left">
+                        <div class="case-card-desc-title">作品名称</div>
+                        <div class="line"></div>
+                        <div class="case-card-desc-content">文字说明文字说明文字说明文字说明文字说明文字说明</div>
+                        <div class="case-card-desc-cate">#静物摄影</div>
+                        <a href="javascript:void(0)">MORE</a>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-card-img">
+                        <img src="./images/index_case8.jpg" alt="" />
+                    </div>
+                    <div class="case-card-desc text-left">
+                        <div class="case-card-desc-title">作品名称</div>
+                        <div class="line"></div>
+                        <div class="case-card-desc-content">文字说明文字说明文字说明文字说明文字说明文字说明</div>
+                        <div class="case-card-desc-cate">#静物摄影</div>
+                        <a href="javascript:void(0)">MORE</a>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-card-img">
+                        <img src="./images/index_case9.jpg" alt="" />
+                    </div>
+                    <div class="case-card-desc text-left">
+                        <div class="case-card-desc-title">作品名称</div>
+                        <div class="line"></div>
+                        <div class="case-card-desc-content">文字说明文字说明文字说明文字说明文字说明文字说明</div>
+                        <div class="case-card-desc-cate">#静物摄影</div>
+                        <a href="javascript:void(0)">MORE</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn btn-default">MORE</div>
+        </section>
+
+        <!-- PARTNER -->
+        <section class="partner section section-4 text-center">
+            <div class="partner-header">
+                <div class="title col col-12">合作伙伴</div>
+                <div class="title-desc col col-12">OUR Partner</div>
+            </div>
+            <div class="partner-content container text-center">
+                <ul class="partner-list row">
+                    <li class="col col-xs-3 col-sm-4 col-md-3"><img src="./images/partner1.jpg" alt="" /></li>
+                    <li class="col col-xs-3 col-sm-4 col-md-3"><img src="./images/partner2.jpg" alt="" /></li>
+                    <li class="col col-xs-3 col-sm-4 col-md-3"><img src="./images/partner3.jpg" alt="" /></li>
+                    <li class="col col-xs-3 col-sm-4 col-md-3"><img src="./images/partner4.jpg" alt="" /></li>
+                    <li class="col col-xs-3 col-sm-4 col-md-3"><img src="./images/partner5.jpg" alt="" /></li>
+                    <li class="col col-xs-3 col-sm-4 col-md-3"><img src="./images/partner6.jpg" alt="" /></li>
+                    <li class="col col-xs-3 col-sm-4 col-md-3"><img src="./images/partner7.jpg" alt="" /></li>
+                    <li class="col col-xs-3 col-sm-4 col-md-3"><img src="./images/partner8.jpg" alt="" /></li>
+                    <li class="col col-xs-3 col-sm-4 col-md-3"><img src="./images/partner9.jpg" alt="" /></li>
+                    <li class="col col-xs-3 col-sm-4 col-md-3"><img src="./images/partner10.jpg" alt="" /></li>
+                    <li class="col col-xs-3 col-sm-4 col-md-3"><img src="./images/partner11.jpg" alt="" /></li>
+                    <li class="col col-xs-3 col-sm-4 col-md-3"><img src="./images/partner12.jpg" alt="" /></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- COMPANY -->
+        <section class="company">
+            <div class="company-box">
+                <div class="company-title">广州壹盏灯文化传播有限公司</div>
+                <div class="company-content">
+                    <div>地址：广州市海珠区南泰路228号联星创意中心C区316室</div>
+                    <div>邮编：510000</div>
+                    <div>电话：020-84159041</div>
+                    <div>手机：123456789</div>
+                    <div>邮箱：**********</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 微信分享 -->
+        <div id="wecaht-qrcode"></div>
+        <script>
+            $('#wecaht-qrcode').load('./qrcode.html');
+        </script>
+
+        <!-- 底部 -->
+        <footer id="footer"></footer>
+        <script>
+            $('#footer').load('./footer.html');
+        </script>
+
+        <!-- 分享按钮组-->
+        <div id="share"></div>
+        <script>
+            $('#share').load('./share.html');
+        </script>
+    </div>
+</body>
+
+</html>
+<script src="./js/index.js"></script>

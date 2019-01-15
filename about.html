@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>壹盏灯简介</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/jq22.css">
+  <link rel="stylesheet" href="./css/public.css">
+  <script src="./js/jquery-latest.min.js"></script>
+  <script src="./js/jquery-3.2.1.min.js"></script>
+  <script src="./js/jq22.js"></script>
+  <script src="./js/public.js"></script>
+  <script src="./js/jquery.qrcode.min.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- 头部 -->
+    <header id="header"></header>
+    <script>
+      $('#header').load('./header.html');
+    </script>
+    <section class="clearfix"></section>
+    <!-- 蒙层 -->
+    <div class="screen-mask"></div>
+    <!-- 关于我们 -->
+    <div class="container">
+      <div class="mt30 mb30">
+        <h4 class="tc">关于我们</h4>
+        <h6 class="tc about-desc">ABOUT US</h6>
+      </div>
+      <div class="row mb40">
+        <div class="card card-border-none col-12">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-4 about-img-box">
+              <img class="card-img-top about-img" src="./images/default.jpg" alt="Card image cap">
+            </div>
+            <div class="col-12 col-md-12 col-lg-7">
+              <div class="tab-content" id="nav-tabContent">
+                <h3 class="about-title-red mt10">广州壹盏灯广告有限公司ATP--STUDIO</h3>
+                <p class="about-tips">团队成员由广州美术学院精英、香港奥美广告公司美术总监、A4广告公司创意总监、传世集合设计顾问组成</p>
+                <p class="about-tips">多年从事时尚大片及大型广告拍摄制作，加上富有经验同时又年轻活力的执行团队，打造出多个极具时尚代表性的行业标杆案例</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-bottom mb50">
+        <h5 class="about-bottom-title">与全球最具影响力品牌合作，并全力协助新兴品牌</h5>
+        <p class="about-tips">主营项目由影视广告制作、平面时尚拍摄、品牌推广策划三大部分组成，形成了针对政府、企业、个人等不同行业、不同规模，提供针对性解决方案，以创意力、执行力和强大的美术团队著称，是广州新锐影视制作及品牌策划传播机构之一</p>
+      </div>
+    </div>
+    <!-- 微信分享 -->
+    <div id="wecaht-qrcode"></div>
+    <script>
+      $('#wecaht-qrcode').load('./qrcode.html');
+    </script>
+    <!-- 底部 -->
+    <footer id="footer"></footer>
+    <script>
+      $('#footer').load('.r/footer.html');
+    </script>
+    <!-- 分享按钮组-->
+    <div id="share"></div>
+    <script>
+        $('#share').load('./share.html');
+    </script>
+  </div>
+</body>
+
+</html>
