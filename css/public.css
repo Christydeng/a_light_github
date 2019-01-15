@@ -273,6 +273,9 @@ a:hover { color: rgb(87, 85, 85) }
      .example-card-title {
          margin-bottom: 0;
      }
+     .example-card:hover .example-card-title{
+        padding: 1.03rem;
+     }
      #breadcrumb-nav-right {
          display: none;
      }
@@ -526,20 +529,31 @@ a:hover { color: rgb(87, 85, 85) }
     position: relative;
 }
 .video-img-mask {
-    display: none;
     position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
     text-align: center;
     background: rgba(0, 0, 0, 0.4);
+    transform: translate(-50%, -50%);
+    transition: all .2s ease-in-out .2s;
 }
 .video-card:hover .video-img-mask {
-    display: block;
+    width: 100%;
+    height: 100%;
 }
 .video-mask-icon {
     width: 3rem;
-    margin-top: 21%;
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: all .4s ease-in-out .2s;
+}
+.video-card:hover .video-mask-icon {
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 /* 影视案例结束 */
 

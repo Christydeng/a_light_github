@@ -11,9 +11,8 @@ var tag = true;
         $shareGroup.append(dom);
         tag = false;
         $('.top').click(function () {
-          var oTitle = $('#header').offset().top;
           $('html,body').animate({
-            'scrollTop': oTitle
+            'scrollTop': 0
           }, 1000);
         });
       }
@@ -34,9 +33,8 @@ $(function () {
         $shareGroup.append(dom);
         tag = false;
         $('.top').click(function () {
-          var oTitle = $('#header').offset().top;
           $('html,body').animate({
-            'scrollTop': oTitle
+            'scrollTop': 0
           }, 1000);
         });
       }
@@ -222,4 +220,8 @@ $(function () {
       })
     }
   });
+});
+
+$(function () {
+  new WOW().init();
 });
