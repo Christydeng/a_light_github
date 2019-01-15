@@ -1,5 +1,5 @@
 // 分享按钮组监听事件
-var dom = `<li class='top'><img src="../images/nav_icon4.png" alt="" /></li>`;
+var dom = `<li class='top'><img src="./images/nav_icon4.png" alt="" /></li>`;
 var tag = true;
 (function ($) {
   $(function () {
@@ -73,10 +73,10 @@ $(function () {
   const list = $('.service-card-box .service-card-top-img-box .service-card-top-img');
   list.each(function (index) {
     $(this).mouseenter(function () {
-      $(this).attr('src', `../images/icon-0${index + 5}.png`);
+      $(this).attr('src', `./images/icon-0${index + 5}.png`);
     });
     $(this).mouseleave(function () {
-      $(this).attr('src', `../images/icon-0${index + 1}.png`);
+      $(this).attr('src', `./images/icon-0${index + 1}.png`);
     });
   });
 })
