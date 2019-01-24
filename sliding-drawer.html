@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>滑动</title>
+  <script src="./js/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+    }
+
+    .slider {
+      width: 100%;
+      height: 100%;
+    }
+
+    .drawer {
+      width: 350px;
+      height: 60px;
+      border: 1px solid #eee;
+      overflow: hidden;
+      position: fixed;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    ul::after {
+      content: '';
+      display: block;
+      visibility: hidden;
+      height: 0;
+      clear: both;
+    }
+
+    ul {
+      width: 660px;
+      zoom: 1;
+    }
+
+    li {
+      list-style: none;
+      float: left;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+    }
+  </style>
+
+  <div class="slider">
+    <div class="drawer" id="drawer">
+      <ul>
+        <li style="background: yellow">一</li>
+        <li style="background: pink">二</li>
+        <li style="background: yellow">三</li>
+        <li style="background: pink">四</li>
+        <li style="background: yellow">五</li>
+        <li style="background: pink">六</li>
+        <li style="background: yellow">七</li>
+        <li style="background: pink">八</li>
+        <li style="background: yellow">九</li>
+        <li style="background: pink">十</li>
+        <li style="background: yellow">十一</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    let drawer = document.querySelector('#drawer');
+    let ul = drawer.children[0];
+    let startX = 0; // 刚开始触碰到屏幕时的手指信息
+    let centerX = 0; // 用来记录每次触摸时上一次的偏移距离
+    let maxRight = 50; // 向右滑动最大距离
+    let maxLeft = -(ul.offsetWidth - drawer.offsetWidth + maxRight); // 求得一个向左滑动得距离
+    let maxLeftBounce = 0; // 向左反弹得值
+    let maxDownBounce = -(ul.offsetWidth - drawer.offsetWidth); // 向右反弹得值
+    ul.addEventListener(
+      'touchstart',
+      function (e) {
+        startX = e.changedTouches[0].clientX;
+      })
+    ul.addEventListener(
+      'touchmove',
+      function (e) {
+        // 清除过渡
+        ul.style.transition = 'none';
+        // 获取差值
+        let dX = e.changedTouches[0].clientX - startX;
+        // 上次的滑动距离加上本次的滑动距离
+        var tempX = centerX + dX;
+        // 当上次滑动的距离加上本次滑动的距离 大于 设定的最大向右距离的时候
+        if (tempX > maxRight) {
+          tempx = maxRight;
+        }
+        // 当上次滑动的距离加上本次滑动的距离 小于 设定的最大向左距离的时候 
+        else if (tempX < maxLeft) {
+          tempX = maxLeft;
+        }
+        // 设置 ul 在 X 轴上的偏移
+        ul.style.transform = 'translateX(' + tempX + 'px)';
+      })
+    // touchend 时，记录此时手指在 X 轴上的落点距离可视左部距离
+    ul.addEventListener(
+      'touchend',
+      function (e) {
+        // 获取差值
+        let dx = e.changedTouches[0].clientX - startX;
+        // 记录移动的距离
+        centerX = centerX + dx;
+        // 两次滑动的距离 大于 设定的 向左 反弹值时
+        if (centerX > maxLeftBounce) {
+          // 让两次滑动的距离 等于 设置的值
+          centerX = maxLeftBounce;
+          // 添加过渡
+          ul.style.transition = 'transform .5s';
+          ul.style.transform = 'translateX(' + centerX + 'px)';
+        }
+        // 两次滑动的距离 小于 设定的 向右 反弹值时
+        else if (centerX < maxDownBounce) {
+            // 让两次滑动的距离 等于 设置的值
+            centerX = maxDownBounce;
+            // 添加过渡
+            ul.style.transition = 'transform .5s';
+            ul.style.transform = 'translateX(' + centerX + 'px)';
+          }
+      })
+  </script>
+</body>
+
+</html>
